@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://lc1ngm8th77c"]
+
+[ext_resource type="Texture2D" uid="uid://cemeikbm5ro0i" path="res://assets/lavender.png" id="1_fi0kw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odjdt"]
+atlas = ExtResource("1_fi0kw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a88lo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odjdt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Plant" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -4)
+sprite_frames = SubResource("SpriteFrames_a88lo")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
