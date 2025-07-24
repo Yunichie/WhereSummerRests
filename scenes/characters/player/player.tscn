@@ -1,8 +1,18 @@
-[gd_scene load_steps=36 format=3 uid="uid://dxv0g2mbfq82v"]
+[gd_scene load_steps=42 format=3 uid="uid://dxv0g2mbfq82v"]
 
 [ext_resource type="Texture2D" uid="uid://d2r3754qin8nb" path="res://assets/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://djplsxmdsfi2v" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://dho0hd6c4i1rx" path="res://assets/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Walk.png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://yvqygxsdppy1" path="res://scripts/state_machine/node_state_machine.gd" id="4_qd3e3"]
+[ext_resource type="Script" uid="uid://b3otnxeji3mif" path="res://scripts/idle_state.gd" id="5_6avc5"]
+[ext_resource type="Script" uid="uid://cnbvsjoc2j0bi" path="res://scripts/walk_state.gd" id="5_qd3e3"]
+[ext_resource type="Script" uid="uid://b8fi3vw2kht2b" path="res://scripts/planting_state.gd" id="7_mk55u"]
+[ext_resource type="Script" uid="uid://np1wli46lwwr" path="res://scripts/watering_state.gd" id="8_xuses"]
+[ext_resource type="Script" uid="uid://dsv1jxa2ndk1q" path="res://scripts/fertilizing_state.gd" id="9_42irl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_g2els")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_g2els")
@@ -19,10 +29,6 @@ region = Rect2(64, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("1_g2els")
 region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
-atlas = ExtResource("1_g2els")
-region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
 atlas = ExtResource("1_g2els")
@@ -126,6 +132,14 @@ region = Rect2(160, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_md1ol"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": false,
+"name": &"dummy_anim",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqkch")
@@ -252,16 +266,47 @@ radius = 9.0
 height = 34.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -20)
+collision_layer = 2
 script = ExtResource("1_qhqgy")
-speed = 100.0
-friction = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_md1ol")
-animation = &"walk_back"
+animation = &"dummy_anim"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("4_qd3e3")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+script = ExtResource("5_6avc5")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+script = ExtResource("5_qd3e3")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Planting" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+script = ExtResource("7_mk55u")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+script = ExtResource("8_xuses")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="Fertilizing" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+script = ExtResource("9_42irl")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+
+[node name="MoveThings" type="Node" parent="StateMachine"]

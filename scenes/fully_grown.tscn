@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://2k2jainmw1i0"]
+
+[ext_resource type="Texture2D" uid="uid://jeg1blcy01hy" path="res://assets/Flowers.png" id="1_kh5fr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kh5fr"]
+radius = 14.0
+
+[node name="FullyGrown" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("1_kh5fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-99, -50)
+shape = SubResource("CapsuleShape2D_kh5fr")
