@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dxv0g2mbfq82v"]
+[gd_scene load_steps=44 format=3 uid="uid://dxv0g2mbfq82v"]
 
 [ext_resource type="Texture2D" uid="uid://d2r3754qin8nb" path="res://assets/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://djplsxmdsfi2v" path="res://scripts/player.gd" id="1_qhqgy"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b8fi3vw2kht2b" path="res://scripts/planting_state.gd" id="7_mk55u"]
 [ext_resource type="Script" uid="uid://np1wli46lwwr" path="res://scripts/watering_state.gd" id="8_xuses"]
 [ext_resource type="Script" uid="uid://dsv1jxa2ndk1q" path="res://scripts/fertilizing_state.gd" id="9_42irl"]
+[ext_resource type="PackedScene" uid="uid://bnlqj31wf53uy" path="res://scenes/pre_interaction.tscn" id="10_3xnwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("1_g2els")
@@ -265,15 +266,19 @@ animations = [{
 radius = 9.0
 height = 34.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_djydg"]
+
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(0, -20)
 collision_layer = 2
 script = ExtResource("1_qhqgy")
+current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_md1ol")
-animation = &"dummy_anim"
+animation = &"idle_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -299,10 +304,11 @@ script = ExtResource("7_mk55u")
 player = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
-[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
+[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim", "pre_interaction_component_collision_shape")]
 script = ExtResource("8_xuses")
 player = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
+pre_interaction_component_collision_shape = NodePath("../../PreInteraction/PreInterCollisionShape2D")
 
 [node name="Fertilizing" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
 script = ExtResource("9_42irl")
@@ -310,3 +316,11 @@ player = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
 [node name="MoveThings" type="Node" parent="StateMachine"]
+
+[node name="PreInteraction" parent="." instance=ExtResource("10_3xnwo")]
+current_tool = 1
+
+[node name="PreInterCollisionShape2D" type="CollisionShape2D" parent="PreInteraction"]
+position = Vector2(-10, 8)
+shape = SubResource("CircleShape2D_djydg")
+debug_color = Color(0.866607, 0.271225, 0.584534, 0.42)

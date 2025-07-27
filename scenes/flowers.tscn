@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3hj4n6fodvfc"]
+
+[ext_resource type="Texture2D" uid="uid://c4cikhagec836" path="res://assets/main assets/Flowers.png" id="1_51en4"]
+[ext_resource type="Shader" uid="uid://cwxc2ijuju1wi" path="res://scenes/flowers_shake.gdshader" id="1_h45pk"]
+[ext_resource type="Script" uid="uid://bvvp7ckqgwxbm" path="res://scenes/flowers.gd" id="2_j7r0a"]
+[ext_resource type="PackedScene" uid="uid://bewrwwry0pv7u" path="res://scenes/post_interaction.tscn" id="2_p1flh"]
+[ext_resource type="PackedScene" uid="uid://bd3f5yfsn1k3e" path="res://scenes/damage_component.tscn" id="4_h45pk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qans"]
+resource_local_to_scene = true
+shader = ExtResource("1_h45pk")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1flh"]
+atlas = ExtResource("1_51en4")
+region = Rect2(129, 1, 62, 62)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_llf8o"]
+radius = 15.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llf8o"]
+radius = 20.0
+height = 44.0
+
+[node name="Flowers" type="Sprite2D"]
+material = SubResource("ShaderMaterial_6qans")
+texture = SubResource("AtlasTexture_p1flh")
+script = ExtResource("2_j7r0a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_llf8o")
+
+[node name="PostInteraction" parent="." instance=ExtResource("2_p1flh")]
+tool = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostInteraction"]
+position = Vector2(0, 15)
+shape = SubResource("CapsuleShape2D_llf8o")
+debug_color = Color(0.87734, 0.172557, 0.72556, 0.42)
+
+[node name="DamageComponent" parent="." instance=ExtResource("4_h45pk")]
