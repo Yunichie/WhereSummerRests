@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qgp3sf15jjpb"
-path="res://.godot/imported/UiCozyFree.png-460dafbb3e9927ed68b859151f8ae921.ctex"
+path="res://.godot/imported/UiCozyFree.png-699deef14c3fcf2a7e7e51e7a2c67299.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UiCozyFree.png/UiCozyFree.png"
-dest_files=["res://.godot/imported/UiCozyFree.png-460dafbb3e9927ed68b859151f8ae921.ctex"]
+source_file="res://assets/additionals/UiCozyFree.png/UiCozyFree.png"
+dest_files=["res://.godot/imported/UiCozyFree.png-699deef14c3fcf2a7e7e51e7a2c67299.ctex"]
 
 [params]
 

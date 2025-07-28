@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=14 format=3 uid="uid://nt186oj2h1rn"]
 
 [ext_resource type="Texture2D" uid="uid://feklom5mjafm" path="res://assets/main assets/Tilemap.png" id="1_tjtrf"]
-[ext_resource type="PackedScene" uid="uid://d3hj4n6fodvfc" path="res://scenes/flowers.tscn" id="2_tkbyn"]
-[ext_resource type="PackedScene" uid="uid://chr0nks4mphud" path="res://scenes/pot.tscn" id="3_v1amf"]
+[ext_resource type="PackedScene" uid="uid://c6ojk2g1yqm3v" path="res://scenes/objects/flowers.tscn" id="2_tkbyn"]
+[ext_resource type="PackedScene" uid="uid://bw1jthjj62alp" path="res://scenes/objects/pot.tscn" id="3_v1amf"]
 [ext_resource type="Texture2D" uid="uid://b6olcmqym1g7v" path="res://assets/main assets/Tilemap - SideBotCorner.png" id="4_yewih"]
 [ext_resource type="Texture2D" uid="uid://bw5racrch73qp" path="res://assets/main assets/Tilemap - SideContinuous.png" id="5_8yb5x"]
 [ext_resource type="Texture2D" uid="uid://bspms3gmbqh2c" path="res://assets/main assets/Tilemap - SideTopCorner.png" id="6_xa2g7"]

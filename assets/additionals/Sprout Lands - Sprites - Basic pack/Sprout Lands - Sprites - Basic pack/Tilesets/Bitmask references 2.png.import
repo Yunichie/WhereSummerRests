@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d56j2uibq5lm"
-path="res://.godot/imported/Bitmask references 2.png-ec325976c7d60ac588515f2f452e13da.ctex"
+path="res://.godot/imported/Bitmask references 2.png-5bd6876c27cb603b4205245d49aaa793.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Bitmask references 2.png"
-dest_files=["res://.godot/imported/Bitmask references 2.png-ec325976c7d60ac588515f2f452e13da.ctex"]
+source_file="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Bitmask references 2.png"
+dest_files=["res://.godot/imported/Bitmask references 2.png-5bd6876c27cb603b4205245d49aaa793.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhym1g7leiw1q"
-path="res://.godot/imported/megabyte-games-abstract-pixel-art-pack-159-640px.png-3c0e52ac7cfb58f93c1e68f66e03e9c2.ctex"
+path="res://.godot/imported/megabyte-games-abstract-pixel-art-pack-159-640px.png-bed9e444477dc4c923b2d09daea77c7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Megabyte Games - Abstract Pixel Art Pack/Megabyte Games - Abstract Pixel Art Pack/640px/megabyte-games-abstract-pixel-art-pack-159-640px.png"
-dest_files=["res://.godot/imported/megabyte-games-abstract-pixel-art-pack-159-640px.png-3c0e52ac7cfb58f93c1e68f66e03e9c2.ctex"]
+source_file="res://assets/additionals/Megabyte Games - Abstract Pixel Art Pack/Megabyte Games - Abstract Pixel Art Pack/640px/megabyte-games-abstract-pixel-art-pack-159-640px.png"
+dest_files=["res://.godot/imported/megabyte-games-abstract-pixel-art-pack-159-640px.png-bed9e444477dc4c923b2d09daea77c7b.ctex"]
 
 [params]
 

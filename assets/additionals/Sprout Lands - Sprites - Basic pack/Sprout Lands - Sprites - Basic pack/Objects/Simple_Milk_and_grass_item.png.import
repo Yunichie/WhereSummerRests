@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn61jear07vyf"
-path="res://.godot/imported/Simple_Milk_and_grass_item.png-abcc25705b7bda34a10a7398a67d469f.ctex"
+path="res://.godot/imported/Simple_Milk_and_grass_item.png-88239a3544eb7a1a258b1b4055930d4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Simple_Milk_and_grass_item.png"
-dest_files=["res://.godot/imported/Simple_Milk_and_grass_item.png-abcc25705b7bda34a10a7398a67d469f.ctex"]
+source_file="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Simple_Milk_and_grass_item.png"
+dest_files=["res://.godot/imported/Simple_Milk_and_grass_item.png-88239a3544eb7a1a258b1b4055930d4c.ctex"]
 
 [params]
 

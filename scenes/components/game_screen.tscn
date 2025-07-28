@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://04kbd1kb12uv"]
+[gd_scene load_steps=4 format=3 uid="uid://246n7fnn48ku"]
 
 [ext_resource type="Theme" uid="uid://b6xyvkslvb1bd" path="res://assets/main assets/game_ui.tres" id="1_85ytm"]
-[ext_resource type="PackedScene" uid="uid://b8qplfu1prpup" path="res://scenes/tools_panel.tscn" id="2_3uriw"]
-[ext_resource type="PackedScene" uid="uid://bbk136xxprk5d" path="res://scenes/day_night_panel.tscn" id="2_dv2sx"]
+[ext_resource type="PackedScene" uid="uid://b8qplfu1prpup" path="res://scenes/UI/tools_panel.tscn" id="2_3uriw"]
+[ext_resource type="PackedScene" uid="uid://bbk136xxprk5d" path="res://scenes/UI/day_night_panel.tscn" id="2_dv2sx"]
 
 [node name="GameScreen" type="CanvasLayer"]
 follow_viewport_scale = 3.705
@@ -18,8 +18,10 @@ theme = ExtResource("1_85ytm")
 [node name="DayNightPanel" parent="MarginContainer" instance=ExtResource("2_dv2sx")]
 layout_mode = 2
 size_flags_horizontal = 8
+script = null
 
 [node name="ToolsPanel" parent="MarginContainer" instance=ExtResource("2_3uriw")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+script = null

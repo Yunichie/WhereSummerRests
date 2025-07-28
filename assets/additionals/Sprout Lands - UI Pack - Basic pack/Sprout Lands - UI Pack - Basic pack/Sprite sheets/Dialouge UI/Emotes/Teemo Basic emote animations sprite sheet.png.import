@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diwnex5kxu26n"
-path="res://.godot/imported/Teemo Basic emote animations sprite sheet.png-55be3c9682b9a29dd808e6c09561e844.ctex"
+path="res://.godot/imported/Teemo Basic emote animations sprite sheet.png-86b0992ca094a9464aa1b6713859ece0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png"
-dest_files=["res://.godot/imported/Teemo Basic emote animations sprite sheet.png-55be3c9682b9a29dd808e6c09561e844.ctex"]
+source_file="res://assets/additionals/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png"
+dest_files=["res://.godot/imported/Teemo Basic emote animations sprite sheet.png-86b0992ca094a9464aa1b6713859ece0.ctex"]
 
 [params]
 

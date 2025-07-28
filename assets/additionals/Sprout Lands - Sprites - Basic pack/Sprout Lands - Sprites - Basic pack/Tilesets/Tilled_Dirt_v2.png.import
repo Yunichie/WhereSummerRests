@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2is4r4b5g741"
-path="res://.godot/imported/Tilled_Dirt_v2.png-c6e951c3056d211041fce42d227c39dd.ctex"
+path="res://.godot/imported/Tilled_Dirt_v2.png-ce1c0c4a7f5ad4ba032b921c6b978f5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_v2.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_v2.png-c6e951c3056d211041fce42d227c39dd.ctex"]
+source_file="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_v2.png"
+dest_files=["res://.godot/imported/Tilled_Dirt_v2.png-ce1c0c4a7f5ad4ba032b921c6b978f5a.ctex"]
 
 [params]
 

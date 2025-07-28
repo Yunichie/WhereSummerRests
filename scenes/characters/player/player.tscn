@@ -1,15 +1,15 @@
 [gd_scene load_steps=44 format=3 uid="uid://dxv0g2mbfq82v"]
 
-[ext_resource type="Texture2D" uid="uid://d2r3754qin8nb" path="res://assets/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://d2r3754qin8nb" path="res://assets/additionals/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://djplsxmdsfi2v" path="res://scripts/player.gd" id="1_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://dho0hd6c4i1rx" path="res://assets/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Walk.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dho0hd6c4i1rx" path="res://assets/additionals/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Walk.png" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://yvqygxsdppy1" path="res://scripts/state_machine/node_state_machine.gd" id="4_qd3e3"]
 [ext_resource type="Script" uid="uid://b3otnxeji3mif" path="res://scripts/idle_state.gd" id="5_6avc5"]
 [ext_resource type="Script" uid="uid://cnbvsjoc2j0bi" path="res://scripts/walk_state.gd" id="5_qd3e3"]
 [ext_resource type="Script" uid="uid://b8fi3vw2kht2b" path="res://scripts/planting_state.gd" id="7_mk55u"]
 [ext_resource type="Script" uid="uid://np1wli46lwwr" path="res://scripts/watering_state.gd" id="8_xuses"]
 [ext_resource type="Script" uid="uid://dsv1jxa2ndk1q" path="res://scripts/fertilizing_state.gd" id="9_42irl"]
-[ext_resource type="PackedScene" uid="uid://bnlqj31wf53uy" path="res://scenes/pre_interaction.tscn" id="10_3xnwo"]
+[ext_resource type="PackedScene" uid="uid://dm1ikcaf4pq4p" path="res://scenes/components/pre_interaction.tscn" id="10_3xnwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("1_g2els")

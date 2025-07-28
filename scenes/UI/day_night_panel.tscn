@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbk136xxprk5d"]
 
 [ext_resource type="Theme" uid="uid://b6xyvkslvb1bd" path="res://assets/main assets/game_ui.tres" id="1_4efdi"]
-[ext_resource type="Script" uid="uid://csileix4jwcly" path="res://scenes/day_night_panel.gd" id="2_d4t0h"]
+[ext_resource type="Script" path="res://scripts/day_night_panel.gd" id="2_d4t0h"]
 
 [node name="DayNightPanel" type="Control"]
 layout_mode = 3

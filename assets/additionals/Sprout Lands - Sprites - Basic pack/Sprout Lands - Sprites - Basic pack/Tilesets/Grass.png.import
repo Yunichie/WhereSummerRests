@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rvesekxhgklw"
-path="res://.godot/imported/Grass.png-76d2063d58540c08d107c3377ba26cff.ctex"
+path="res://.godot/imported/Grass.png-3a08f2b912917a793c890914e8f98a79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-76d2063d58540c08d107c3377ba26cff.ctex"]
+source_file="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png"
+dest_files=["res://.godot/imported/Grass.png-3a08f2b912917a793c890914e8f98a79.ctex"]
 
 [params]
 

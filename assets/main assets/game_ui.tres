@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=17 format=3 uid="uid://b6xyvkslvb1bd"]
 
-[ext_resource type="Texture2D" uid="uid://bsn3vomgermsp" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_23v2m"]
-[ext_resource type="FontFile" uid="uid://dbsu5k1wxtk16" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_k50wr"]
+[ext_resource type="Texture2D" uid="uid://bsn3vomgermsp" path="res://assets/additionals/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_23v2m"]
+[ext_resource type="FontFile" uid="uid://dbsu5k1wxtk16" path="res://assets/additionals/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_k50wr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6g6cn"]
 atlas = ExtResource("1_23v2m")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnjejfnc1abfi"
-path="res://.godot/imported/Weather_UI_Free.png-070725d8bbc6f5812ede2a607b32e953.ctex"
+path="res://.godot/imported/Weather_UI_Free.png-7d7886d6aa993b9717f043918cbc5324.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/weather/Weather_UI_Free.png"
-dest_files=["res://.godot/imported/Weather_UI_Free.png-070725d8bbc6f5812ede2a607b32e953.ctex"]
+source_file="res://assets/additionals/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/weather/Weather_UI_Free.png"
+dest_files=["res://.godot/imported/Weather_UI_Free.png-7d7886d6aa993b9717f043918cbc5324.ctex"]
 
 [params]
 

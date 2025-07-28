@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0s5rqsni32j0"
-path="res://.godot/imported/TX Tileset Wall.png-191ca50e468841613753b85c2044699b.ctex"
+path="res://.godot/imported/TX Tileset Wall.png-09dc8212958ab2e2bd75fd0486530bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art Top Down - Basic v1.2.0/Texture/TX Tileset Wall.png"
-dest_files=["res://.godot/imported/TX Tileset Wall.png-191ca50e468841613753b85c2044699b.ctex"]
+source_file="res://assets/additionals/Pixel Art Top Down - Basic v1.2.0/Texture/TX Tileset Wall.png"
+dest_files=["res://.godot/imported/TX Tileset Wall.png-09dc8212958ab2e2bd75fd0486530bc0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsmbex61p845b"
-path="res://.godot/imported/2.png-c300433f692d568c12759d818c543204.ctex"
+path="res://.godot/imported/2.png-25ed70d04d706605c2c4c5a3cae12fbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/New free backgrounds part1/dusk/2.png"
-dest_files=["res://.godot/imported/2.png-c300433f692d568c12759d818c543204.ctex"]
+source_file="res://assets/additionals/New free backgrounds part1/dusk/2.png"
+dest_files=["res://.godot/imported/2.png-25ed70d04d706605c2c4c5a3cae12fbc.ctex"]
 
 [params]
 

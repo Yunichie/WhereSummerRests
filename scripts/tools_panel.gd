@@ -4,7 +4,6 @@ extends PanelContainer
 @onready var tool_plant: Button = $MarginContainer/HBoxContainer/ToolPlant
 
 
-
 func _on_tool_watering_can_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.WaterFlowers)
 	

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b8qplfu1prpup"]
 
 [ext_resource type="Theme" uid="uid://b6xyvkslvb1bd" path="res://assets/main assets/game_ui.tres" id="1_g30rm"]
-[ext_resource type="Texture2D" uid="uid://c54vft2x5rhjr" path="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="2_e074n"]
-[ext_resource type="Script" uid="uid://xhbm5bifsupi" path="res://scenes/tools_panel.gd" id="2_q87w5"]
+[ext_resource type="Texture2D" uid="uid://c54vft2x5rhjr" path="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="2_e074n"]
+[ext_resource type="Script" uid="uid://xhbm5bifsupi" path="res://scripts/tools_panel.gd" id="2_q87w5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q87w5"]
 atlas = ExtResource("2_e074n")

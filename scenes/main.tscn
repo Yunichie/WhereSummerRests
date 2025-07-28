@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=4 uid="uid://wjglw0y3jf0a"]
 
 [ext_resource type="PackedScene" uid="uid://dxv0g2mbfq82v" path="res://scenes/characters/player/player.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://04kbd1kb12uv" path="res://scenes/game_screen.tscn" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b8ymrfx5e4ce" path="res://scenes/UI/game_screen.tscn" id="1_tefeu"]
 [ext_resource type="TileSet" uid="uid://nt186oj2h1rn" path="res://tilesets/game_tile_set.tres" id="2_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://4b6lchv0qo1x" path="res://scenes/day_night_cycle.tscn" id="2_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://ksfucarosmhh" path="res://assets/New free backgrounds part1/day/orig_big.png" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://d0lv5uhqmwjoa" path="res://scenes/UI/day_night_cycle.tscn" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://ksfucarosmhh" path="res://assets/additionals/New free backgrounds part1/day/orig_big.png" id="5_tbgi4"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -12,6 +12,7 @@ y_sort_enabled = true
 [node name="GameScreen" parent="." instance=ExtResource("1_tefeu")]
 
 [node name="DayNightCycle" parent="." instance=ExtResource("2_tbgi4")]
+script = null
 
 [node name="Map" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -47,4 +48,4 @@ position_smoothing_enabled = true
 [node name="BGDay" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(-2, -32)
-texture = ExtResource("10_choun")
+texture = ExtResource("5_tbgi4")

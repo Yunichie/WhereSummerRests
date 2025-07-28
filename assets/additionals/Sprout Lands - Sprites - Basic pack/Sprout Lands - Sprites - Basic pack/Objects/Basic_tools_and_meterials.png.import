@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c54vft2x5rhjr"
-path="res://.godot/imported/Basic_tools_and_meterials.png-6b0bbeed28db1ae38536332b6d2cb0d7.ctex"
+path="res://.godot/imported/Basic_tools_and_meterials.png-3636ec1581d6373d04103c4dba6e5cef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png"
-dest_files=["res://.godot/imported/Basic_tools_and_meterials.png-6b0bbeed28db1ae38536332b6d2cb0d7.ctex"]
+source_file="res://assets/additionals/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png"
+dest_files=["res://.godot/imported/Basic_tools_and_meterials.png-3636ec1581d6373d04103c4dba6e5cef.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqrlauthpckdb"
-path="res://.godot/imported/TX Plant.png-d5cf0df1f4763eb6ee2548d3864705fb.ctex"
+path="res://.godot/imported/TX Plant.png-2a07eb4f4d0ee5bd11ef37873adfd4d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art Top Down - Basic v1.2.0/Texture/TX Plant.png"
-dest_files=["res://.godot/imported/TX Plant.png-d5cf0df1f4763eb6ee2548d3864705fb.ctex"]
+source_file="res://assets/additionals/Pixel Art Top Down - Basic v1.2.0/Texture/TX Plant.png"
+dest_files=["res://.godot/imported/TX Plant.png-2a07eb4f4d0ee5bd11ef37873adfd4d6.ctex"]
 
 [params]
 

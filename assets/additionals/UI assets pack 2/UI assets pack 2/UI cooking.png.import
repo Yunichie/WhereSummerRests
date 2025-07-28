@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp7iun2qxelgp"
-path="res://.godot/imported/UI cooking.png-ed2fefec0e815443745f90ac1f20a6ee.ctex"
+path="res://.godot/imported/UI cooking.png-b4338a9cf6ad7f1fd7426180ec0fa6bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI assets pack 2/UI assets pack 2/UI cooking.png"
-dest_files=["res://.godot/imported/UI cooking.png-ed2fefec0e815443745f90ac1f20a6ee.ctex"]
+source_file="res://assets/additionals/UI assets pack 2/UI assets pack 2/UI cooking.png"
+dest_files=["res://.godot/imported/UI cooking.png-b4338a9cf6ad7f1fd7426180ec0fa6bf.ctex"]
 
 [params]
 

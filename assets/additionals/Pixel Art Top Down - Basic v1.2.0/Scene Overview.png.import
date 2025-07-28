@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp2l84ctf1tv3"
-path="res://.godot/imported/Scene Overview.png-69b9c4f6fece6546c1bb6cc0ac881487.ctex"
+path="res://.godot/imported/Scene Overview.png-5ae146175243ce0c9037e083deffee27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art Top Down - Basic v1.2.0/Scene Overview.png"
-dest_files=["res://.godot/imported/Scene Overview.png-69b9c4f6fece6546c1bb6cc0ac881487.ctex"]
+source_file="res://assets/additionals/Pixel Art Top Down - Basic v1.2.0/Scene Overview.png"
+dest_files=["res://.godot/imported/Scene Overview.png-5ae146175243ce0c9037e083deffee27.ctex"]
 
 [params]
 
