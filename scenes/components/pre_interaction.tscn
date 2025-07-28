@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnlqj31wf53uy"]
+
+[ext_resource type="Script" uid="uid://cycxxg5qg12om" path="res://scripts/pre_interaction_component.gd" id="1_l7h48"]
+
+[node name="PreInteraction" type="Area2D"]
+collision_layer = 8
+collision_mask = 16
+script = ExtResource("1_l7h48")

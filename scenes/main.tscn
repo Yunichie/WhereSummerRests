@@ -1,13 +1,17 @@
 [gd_scene load_steps=6 format=4 uid="uid://wjglw0y3jf0a"]
 
 [ext_resource type="PackedScene" uid="uid://dxv0g2mbfq82v" path="res://scenes/characters/player/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://04kbd1kb12uv" path="res://scenes/game_screen.tscn" id="1_tefeu"]
 [ext_resource type="TileSet" uid="uid://nt186oj2h1rn" path="res://tilesets/game_tile_set.tres" id="2_o6xl0"]
-[ext_resource type="Script" uid="uid://cyx73ybym4fkc" path="res://scripts/daynightcycle.gd" id="8_choun"]
-[ext_resource type="Texture2D" uid="uid://bkpc1kjm4t2xn" path="res://assets/daynightcycle-gradient-texture.tres" id="9_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://4b6lchv0qo1x" path="res://scenes/day_night_cycle.tscn" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://ksfucarosmhh" path="res://assets/New free backgrounds part1/day/orig_big.png" id="10_choun"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
+
+[node name="GameScreen" parent="." instance=ExtResource("1_tefeu")]
+
+[node name="DayNightCycle" parent="." instance=ExtResource("2_tbgi4")]
 
 [node name="Map" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -37,10 +41,6 @@ position = Vector2(1, -10)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, 10)
 position_smoothing_enabled = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-script = ExtResource("8_choun")
-gradient = ExtResource("9_ya4ey")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 

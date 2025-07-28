@@ -1,0 +1,106 @@
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://b6xyvkslvb1bd"]
+
+[ext_resource type="Texture2D" uid="uid://bsn3vomgermsp" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_23v2m"]
+[ext_resource type="FontFile" uid="uid://dbsu5k1wxtk16" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_k50wr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g6cn"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(568, 195, 35, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u8v2f"]
+texture = SubResource("AtlasTexture_6g6cn")
+texture_margin_left = 1.0
+texture_margin_top = 2.0
+texture_margin_right = 1.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6ofu"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(11, 11, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oy6md"]
+texture = SubResource("AtlasTexture_t6ofu")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qcud"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csj4f"]
+texture = SubResource("AtlasTexture_5qcud")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmpxn"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qcud"]
+texture = SubResource("AtlasTexture_gmpxn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csj4f"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(11, 155, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6ofu"]
+texture = SubResource("AtlasTexture_csj4f")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k50wr"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmpxn"]
+texture = SubResource("AtlasTexture_k50wr")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy6md"]
+atlas = ExtResource("1_23v2m")
+region = Rect2(293, 101, 38, 38)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6g6cn"]
+texture = SubResource("AtlasTexture_oy6md")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 38, 38)
+
+[resource]
+DayNightCounter/base_type = &"PanelContainer"
+DayNightCounter/styles/panel = SubResource("StyleBoxTexture_u8v2f")
+DayNightLabel/base_type = &"Label"
+DayNightLabel/font_sizes/font_size = 18
+DayNightLabel/fonts/font = ExtResource("2_k50wr")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+ToolButton/base_type = &"Button"
+ToolButton/styles/disabled = SubResource("StyleBoxTexture_oy6md")
+ToolButton/styles/focus = SubResource("StyleBoxTexture_csj4f")
+ToolButton/styles/hover = SubResource("StyleBoxTexture_5qcud")
+ToolButton/styles/normal = SubResource("StyleBoxTexture_t6ofu")
+ToolButton/styles/pressed = SubResource("StyleBoxTexture_gmpxn")
+ToolsPanel/base_type = &"PanelContainer"
+ToolsPanel/styles/panel = SubResource("StyleBoxTexture_6g6cn")

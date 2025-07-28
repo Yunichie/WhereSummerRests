@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbk136xxprk5d"]
+
+[ext_resource type="Theme" uid="uid://b6xyvkslvb1bd" path="res://assets/main assets/game_ui.tres" id="1_4efdi"]
+[ext_resource type="Script" uid="uid://csileix4jwcly" path="res://scenes/day_night_panel.gd" id="2_d4t0h"]
+
+[node name="DayNightPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(10, 10)
+theme = ExtResource("1_4efdi")
+script = ExtResource("2_d4t0h")
+
+[node name="DayPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_bottom = 26.0
+theme_type_variation = &"DayNightCounter"
+
+[node name="MarginContainer" type="MarginContainer" parent="DayPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="DayLabel" type="Label" parent="DayPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayNightLabel"
+text = "DAY 0"
+
+[node name="TimePanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 27.0
+offset_bottom = 53.0
+theme_type_variation = &"DayNightCounter"
+
+[node name="MarginContainer" type="MarginContainer" parent="TimePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TimeLabel" type="Label" parent="TimePanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayNightLabel"
+text = "00:00"

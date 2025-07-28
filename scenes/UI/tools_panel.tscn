@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8qplfu1prpup"]
+
+[ext_resource type="Theme" uid="uid://b6xyvkslvb1bd" path="res://assets/main assets/game_ui.tres" id="1_g30rm"]
+[ext_resource type="Texture2D" uid="uid://c54vft2x5rhjr" path="res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="2_e074n"]
+[ext_resource type="Script" uid="uid://xhbm5bifsupi" path="res://scenes/tools_panel.gd" id="2_q87w5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q87w5"]
+atlas = ExtResource("2_e074n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wu4fl"]
+load_path = "res://.godot/imported/Basic_tools_and_meterials.png-6b0bbeed28db1ae38536332b6d2cb0d7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ikxn"]
+atlas = SubResource("CompressedTexture2D_wu4fl")
+region = Rect2(32, 0, 16, 16)
+
+[node name="ToolsPanel" type="PanelContainer"]
+offset_right = 78.0
+offset_bottom = 48.0
+scale = Vector2(3, 3)
+theme = ExtResource("1_g30rm")
+theme_type_variation = &"ToolsPanel"
+script = ExtResource("2_q87w5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ToolWateringCan" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_q87w5")
+icon_alignment = 1
+
+[node name="ToolPlant" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_5ikxn")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWateringCan" to="." method="_on_tool_watering_can_pressed"]
