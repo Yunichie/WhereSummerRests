@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://cb4qjvu8h4orh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e6sg0"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_e8mqv"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.0116618, 0), 0.0, 0.0, 0, 0, Vector2(0.498542, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_i3tv7"]
+curve = SubResource("Curve_e8mqv")
+
+[sub_resource type="Gradient" id="Gradient_hd4ni"]
+offsets = PackedFloat32Array(0.00946372, 1)
+colors = PackedColorArray(1, 1, 1, 0.0784314, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wqku2"]
+gradient = SubResource("Gradient_hd4ni")
+
+[sub_resource type="Curve" id="Curve_epr6a"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_htgty"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 14.7235), 0.0, 0.0, 0, 0, Vector2(0.25656, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_of83e"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_l5200"]
+curve_x = SubResource("Curve_epr6a")
+curve_y = SubResource("Curve_htgty")
+curve_z = SubResource("Curve_of83e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_psdps"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1000, 50, 1)
+gravity = Vector3(0, 5000, 0)
+scale_min = 0.2
+scale_over_velocity_curve = SubResource("CurveXYZTexture_l5200")
+color_initial_ramp = SubResource("GradientTexture1D_wqku2")
+alpha_curve = SubResource("CurveTexture_i3tv7")
+
+[node name="RainWeather" type="Node2D"]
+
+[node name="Rain" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_e6sg0")
+amount = 1000
+preprocess = 0.5
+visibility_rect = Rect2(-1000, -200, 2000, 2000)
+process_material = SubResource("ParticleProcessMaterial_psdps")
