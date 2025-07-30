@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4cikhagec836" path="res://assets/main assets/Flowers.png" id="1_51en4"]
 [ext_resource type="Shader" uid="uid://db1brr2tf6wb7" path="res://scenes/flowers_shake.gdshader" id="1_h45pk"]
-[ext_resource type="Script" path="res://scripts/flowers.gd" id="2_j7r0a"]
+[ext_resource type="Script" uid="uid://bvvp7ckqgwxbm" path="res://scripts/flowers.gd" id="2_j7r0a"]
 [ext_resource type="PackedScene" uid="uid://da08qxgmcc4j" path="res://scenes/components/post_interaction.tscn" id="2_p1flh"]
 [ext_resource type="PackedScene" uid="uid://csxooogbqc73k" path="res://scenes/components/damage_component.tscn" id="4_h45pk"]
 

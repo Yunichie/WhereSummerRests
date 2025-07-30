@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5xos2iwhhhes"]
+
+[ext_resource type="Script" uid="uid://cc5xeon6so2h6" path="res://scripts/Weather_Cycle.gd" id="1_cjxta"]
+
+[node name="WeatherCycle" type="CanvasModulate"]
+script = ExtResource("1_cjxta")
+weather_color = Color(0.087615, 0.313921, 0.440607, 1)

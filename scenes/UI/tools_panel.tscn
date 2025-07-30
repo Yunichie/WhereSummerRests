@@ -60,4 +60,11 @@ theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_5ikxn")
 icon_alignment = 1
 
+[node name="Seeds" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+icon = SubResource("AtlasTexture_5ikxn")
+icon_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWateringCan" to="." method="_on_tool_watering_can_pressed"]

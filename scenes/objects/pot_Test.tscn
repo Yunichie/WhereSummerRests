@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://cf26vf1wu5lu7"]
+
+[ext_resource type="Texture2D" uid="uid://b1mroycxtddkv" path="res://assets/main assets/BasePot.png" id="1_3ao7m"]
+[ext_resource type="Script" uid="uid://b03rjmm37bivo" path="res://scripts/Script Test/pot_test.gd" id="2_3ao7m"]
+[ext_resource type="PackedScene" uid="uid://da08qxgmcc4j" path="res://scenes/components/post_interaction.tscn" id="3_1ejxa"]
+[ext_resource type="PackedScene" uid="uid://csxooogbqc73k" path="res://scenes/components/damage_component.tscn" id="4_eh8mc"]
+[ext_resource type="Script" uid="uid://d4ejdijt7n1tq" path="res://scripts/Script Test/plant_growth_test.gd" id="5_yrx2q"]
+[ext_resource type="Script" uid="uid://ct1ulm0t8w1xk" path="res://scripts/Script Test/progress_bar_test.gd" id="6_1ejxa"]
+[ext_resource type="Texture2D" uid="uid://bsaeox3wo8h6l" path="res://assets/main assets/Hibiscus.png" id="6_eh8mc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krnfi"]
+atlas = ExtResource("1_3ao7m")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_46caw"]
+radius = 17.0294
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mqttc"]
+radius = 22.0
+
+[node name="BasePot" type="Sprite2D"]
+texture = SubResource("AtlasTexture_krnfi")
+script = ExtResource("2_3ao7m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_46caw")
+
+[node name="PostInteraction" parent="." instance=ExtResource("3_1ejxa")]
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostInteraction"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_mqttc")
+debug_color = Color(0.859436, 0.207427, 0.736312, 0.42)
+
+[node name="DamageComponent" parent="." instance=ExtResource("4_eh8mc")]
+
+[node name="PlantGrowth" type="Node" parent="."]
+script = ExtResource("5_yrx2q")
+growth_stages = Array[Texture2D]([ExtResource("1_3ao7m"), ExtResource("6_eh8mc")])
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 14.0
+offset_top = -39.0
+offset_right = 18.0
+offset_bottom = -12.0
+script = ExtResource("6_1ejxa")

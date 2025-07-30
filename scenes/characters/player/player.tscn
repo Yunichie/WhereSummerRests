@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dxv0g2mbfq82v"]
+[gd_scene load_steps=46 format=3 uid="uid://dxv0g2mbfq82v"]
 
 [ext_resource type="Texture2D" uid="uid://d2r3754qin8nb" path="res://assets/additionals/Farm RPG FREE 16x16 - Tiny Asset Pack/Farm RPG FREE 16x16 - Tiny Asset Pack/Character/Idle.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://djplsxmdsfi2v" path="res://scripts/player.gd" id="1_qhqgy"]
@@ -9,7 +9,9 @@
 [ext_resource type="Script" uid="uid://b8fi3vw2kht2b" path="res://scripts/planting_state.gd" id="7_mk55u"]
 [ext_resource type="Script" uid="uid://np1wli46lwwr" path="res://scripts/watering_state.gd" id="8_xuses"]
 [ext_resource type="Script" uid="uid://dsv1jxa2ndk1q" path="res://scripts/fertilizing_state.gd" id="9_42irl"]
+[ext_resource type="Script" uid="uid://c7ve7lf4ufqa4" path="res://scripts/PlaceCanopy_State.gd" id="9_djydg"]
 [ext_resource type="PackedScene" uid="uid://dm1ikcaf4pq4p" path="res://scenes/components/pre_interaction.tscn" id="10_3xnwo"]
+[ext_resource type="Script" uid="uid://lyr1hlqow7eb" path="res://scripts/DiseaseManagement_State.gd" id="11_bsn6e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("1_g2els")
@@ -273,7 +275,7 @@ y_sort_enabled = true
 position = Vector2(0, -20)
 collision_layer = 2
 script = ExtResource("1_qhqgy")
-current_tool = 1
+current_tool = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -310,12 +312,26 @@ player = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 pre_interaction_component_collision_shape = NodePath("../../PreInteraction/PreInterCollisionShape2D")
 
+[node name="Canopy" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim", "pre_interaction_component_collision_shape")]
+script = ExtResource("9_djydg")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+pre_interaction_component_collision_shape = NodePath("../../PreInteraction/PreInterCollisionShape2D")
+metadata/_custom_type_script = "uid://7wsgk6gntv6"
+
 [node name="Fertilizing" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim")]
 script = ExtResource("9_42irl")
 player = NodePath("../..")
 anim = NodePath("../../AnimatedSprite2D")
 
 [node name="MoveThings" type="Node" parent="StateMachine"]
+
+[node name="Disease" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "anim", "pre_interaction_component_collision_shape")]
+script = ExtResource("11_bsn6e")
+player = NodePath("../..")
+anim = NodePath("../../AnimatedSprite2D")
+pre_interaction_component_collision_shape = NodePath("../../PreInteraction/PreInterCollisionShape2D")
+metadata/_custom_type_script = "uid://7wsgk6gntv6"
 
 [node name="PreInteraction" parent="." instance=ExtResource("10_3xnwo")]
 

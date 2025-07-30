@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://wjglw0y3jf0a"]
+[gd_scene load_steps=7 format=4 uid="uid://wjglw0y3jf0a"]
 
 [ext_resource type="PackedScene" uid="uid://dxv0g2mbfq82v" path="res://scenes/characters/player/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b8ymrfx5e4ce" path="res://scenes/UI/game_screen.tscn" id="1_tefeu"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d0lv5uhqmwjoa" path="res://scenes/UI/day_night_cycle.tscn" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://ksfucarosmhh" path="res://assets/additionals/New free backgrounds part1/day/orig_big.png" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cf26vf1wu5lu7" path="res://scenes/objects/pot_Test.tscn" id="6_tefeu"]
-[ext_resource type="Texture2D" uid="uid://26levytlk2mw" path="res://assets/main assets/terpal.png" id="7_o6xl0"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -52,9 +51,5 @@ z_index = -1
 position = Vector2(-2, -32)
 texture = ExtResource("5_tbgi4")
 
-[node name="terpal_test" type="Sprite2D" parent="."]
-position = Vector2(30, 96)
-texture = ExtResource("7_o6xl0")
-
 [node name="BasePot" parent="." instance=ExtResource("6_tefeu")]
-position = Vector2(95, 94)
+position = Vector2(102, 94)

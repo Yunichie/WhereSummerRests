@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw1jthjj62alp"]
+[gd_scene load_steps=7 format=3 uid="uid://bw1jthjj62alp"]
 
 [ext_resource type="Texture2D" uid="uid://b1mroycxtddkv" path="res://assets/main assets/BasePot.png" id="1_mqttc"]
 [ext_resource type="Script" uid="uid://b6is4uee8v5mm" path="res://scripts/pot.gd" id="2_knt3t"]
 [ext_resource type="PackedScene" uid="uid://da08qxgmcc4j" path="res://scenes/components/post_interaction.tscn" id="2_kpqpp"]
 [ext_resource type="PackedScene" uid="uid://csxooogbqc73k" path="res://scenes/components/damage_component.tscn" id="3_knt3t"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_krnfi"]
-atlas = ExtResource("1_mqttc")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_46caw"]
 radius = 16.0
@@ -15,9 +12,8 @@ radius = 16.0
 radius = 21.095
 
 [node name="BasePot" type="Sprite2D"]
-texture = SubResource("AtlasTexture_krnfi")
+texture = ExtResource("1_mqttc")
 script = ExtResource("2_knt3t")
-Type = "Pot"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
