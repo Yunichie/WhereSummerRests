@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0cjrb40sbou5"]
+
+[sub_resource type="Gradient" id="Gradient_kluv4"]
+colors = PackedColorArray(1, 1, 1, 0.0980392, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vsh1y"]
+gradient = SubResource("Gradient_kluv4")
+
+[sub_resource type="Gradient" id="Gradient_jqh2l"]
+offsets = PackedFloat32Array(0, 0.488959, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e5tqy"]
+gradient = SubResource("Gradient_jqh2l")
+
+[sub_resource type="Curve" id="Curve_e5haf"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.139942, 98.1567), 0.0, 0.0, 0, 0, Vector2(0.259475, 2.30414), 0.0, 0.0, 0, 0, Vector2(0.387755, 89.1705), 0.0, 0.0, 0, 0, Vector2(0.48688, -3.68665), 0.0, 0.0, 0, 0, Vector2(0.620991, 80.1843), 0.0, 0.0, 0, 0, Vector2(0.749271, -3.68665), 0.0, 0.0, 0, 0, Vector2(0.87172, 77.1889), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 9
+
+[sub_resource type="CurveTexture" id="CurveTexture_246mt"]
+curve = SubResource("Curve_e5haf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s3fow"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(200, 200, 1)
+gravity = Vector3(500, 100, 0)
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = 6.0
+tangential_accel_curve = SubResource("CurveTexture_246mt")
+damping_max = 100.0
+scale_min = 1.5
+scale_max = 1.8
+color_ramp = SubResource("GradientTexture1D_e5tqy")
+color_initial_ramp = SubResource("GradientTexture1D_vsh1y")
+
+[node name="WindyWeather" type="Node2D"]
+
+[node name="Wind" type="GPUParticles2D" parent="."]
+position = Vector2(-663, -8)
+amount = 40
+lifetime = 5.0
+preprocess = 2.0
+randomness = 1.0
+trail_enabled = true
+trail_lifetime = 0.6
+process_material = SubResource("ParticleProcessMaterial_s3fow")
