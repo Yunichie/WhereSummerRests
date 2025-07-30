@@ -4,5 +4,6 @@ enum Tools {
 	None,
 	WaterFlowers,
 	FertilizeFlowers,
+	Canopy,
 	PlantFlowers
 }

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2k2jainmw1i0"]
 
-[ext_resource type="Texture2D" uid="uid://jeg1blcy01hy" path="res://assets/Flowers.png" id="1_kh5fr"]
+[ext_resource type="Texture2D" uid="uid://c4cikhagec836" path="res://assets/main assets/Flowers.png" id="1_kh5fr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kh5fr"]
 radius = 14.0
