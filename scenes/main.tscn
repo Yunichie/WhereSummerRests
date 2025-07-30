@@ -1,20 +1,22 @@
-[gd_scene load_steps=8 format=4 uid="uid://wjglw0y3jf0a"]
+[gd_scene load_steps=11 format=4 uid="uid://wjglw0y3jf0a"]
 
 [ext_resource type="PackedScene" uid="uid://dxv0g2mbfq82v" path="res://scenes/characters/player/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b8ymrfx5e4ce" path="res://scenes/UI/game_screen.tscn" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://detlf06f2s7w" path="res://scenes/components/day_night_cycle.tscn" id="2_choun"]
 [ext_resource type="TileSet" uid="uid://nt186oj2h1rn" path="res://tilesets/game_tile_set.tres" id="2_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://d0lv5uhqmwjoa" path="res://scenes/UI/day_night_cycle.tscn" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://ksfucarosmhh" path="res://assets/additionals/New free backgrounds part1/day/orig_big.png" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cf26vf1wu5lu7" path="res://scenes/objects/pot_Test.tscn" id="6_tefeu"]
 [ext_resource type="Texture2D" uid="uid://26levytlk2mw" path="res://assets/main assets/terpal.png" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://cje076m70hwtk" path="res://scenes/weather_system.gd" id="8_choun"]
+[ext_resource type="PackedScene" uid="uid://cb4qjvu8h4orh" path="res://scenes/components/rain_weather.tscn" id="9_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://c0cjrb40sbou5" path="res://scenes/components/windy_weather.tscn" id="10_eb6dy"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
 
 [node name="GameScreen" parent="." instance=ExtResource("1_tefeu")]
 
-[node name="DayNightCycle" parent="." instance=ExtResource("2_tbgi4")]
-script = null
+[node name="DayNightCycle" parent="." instance=ExtResource("2_choun")]
 
 [node name="Map" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -53,8 +55,18 @@ position = Vector2(-2, -32)
 texture = ExtResource("5_tbgi4")
 
 [node name="terpal_test" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(30, 96)
 texture = ExtResource("7_o6xl0")
 
 [node name="BasePot" parent="." instance=ExtResource("6_tefeu")]
 position = Vector2(95, 94)
+
+[node name="WeatherSystem" type="Node" parent="."]
+script = ExtResource("8_choun")
+rain_weather_scene = ExtResource("9_ya4ey")
+windy_weather_scene = ExtResource("10_eb6dy")
+min_wait_time = 5.0
+max_wait_time = 10.0
+min_weather_duration = 15.0
+max_weather_duration = 20.0

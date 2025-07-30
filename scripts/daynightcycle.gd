@@ -18,7 +18,6 @@ signal time_tick(day: int, hour: int, min: int)
 func _ready() -> void:
 	time = INGAME_TO_REAL * INIT_HOUR * MPH
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.time += delta * INGAME_SPEED * INGAME_TO_REAL
 	var value = (sin(time - PI / 2) + 1.0) / 2.0
